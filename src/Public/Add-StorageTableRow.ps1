@@ -49,7 +49,7 @@ function Add-StorageTableRow
 		}
 	}
     
- 	return ($table.CloudTable.Execute((invoke-expression "[Microsoft.WindowsAzure.Storage.Table.TableOperation]::insert(`$entity)")))
+ 	return ($table.CloudTable.ExecuteAsync((invoke-expression "[Microsoft.WindowsAzure.Storage.Table.TableOperation]::insert(`$entity)")))
  
 }
 
